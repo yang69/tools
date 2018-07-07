@@ -1,0 +1,12 @@
+{
+  "APP_TITLE": "Yang's Tool Kit",
+  "QRCODE_TIP": "请输入你想要放入二维码中的文本。",
+  "QRCODE_TEXT": "文本：",
+  "ENCODING_URLENCODE": "URL encode",
+  "ENCODING_URLENCODE_PLACEHOLDER_TEXT": "将要编码的文本",
+  "ENCODING_URLENCODE_PLACEHOLDER_ENCODED": "URL编码后的文本",
+  "ENCODING_BASE64": "Base64",
+  "ENCODING_BASE64_PLACEHOLDER_TEXT": "将要编码的文本",
+  "ENCODING_BASE64_PLACEHOLDER_ENCODED": "Base64编码后的文本",
+  "BOTTOM_INFO": "如果觉得本站有趣，可以移步这里： <a href='https://github.com/yang69'>https://github.com/yang69</a> 看看。"
+}

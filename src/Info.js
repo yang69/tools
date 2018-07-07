@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import {Switch, Route, Link} from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import HashToMagnet from './HashToMagnet';
 import TextToQrcode from "./TextToQrcode";
 import MagnetToHash from "./MagnetToHash";
+import EncodingTools from './EncodingTools';
 
 const tabs = [
   {value: 0, hash: "#text-to-qrcode"},
@@ -12,6 +14,7 @@ const tabs = [
   {value: 2, hash: "#json-resolver"},
   {value: 3, hash: "#hash-to-magnet"},
   {value: 4, hash: "#magnet-to-hash"},
+  {value: 5, hash: "#encoding-tools"}
 ]
 
 class Info extends Component {
@@ -37,7 +40,6 @@ class Info extends Component {
   }
 
   componentDidUpdate() {
-    window.location.hash = tabs[this.state.tabIndex].hash;
   }
 
   handleChange = (event, value) => {
@@ -49,26 +51,13 @@ class Info extends Component {
   render() {
     const {tabIndex} = this.state;
     return (
-      <div>
-        <AppBar position={"static"} color={"default"}>
-          <Tabs
-            value={this.state.tabIndex}
-            centered={true}
-            onChange={this.handleChange}
-          >
-            <Tab label={"Text To Qr-Code"}></Tab>
-            <Tab label={"Date Calculator"} disabled={true}></Tab>
-            <Tab label={"JSON Resolver"} disabled={true}></Tab>
-            <Tab label={"Hash To Magnet"}></Tab>
-            <Tab label={"Magnet To Hash"}></Tab>
-          </Tabs>
-        </AppBar>
-        {0 == tabIndex && <TextToQrcode />}
-        {1 == tabIndex && <div>Still in progress</div>}
-        {2 == tabIndex && <div>Still in progress</div>}
-        {3 == tabIndex && <HashToMagnet />}
-        {4 == tabIndex && <MagnetToHash />}
-      </div>
+      <Switch>
+        <Route exact path="/" component={TextToQrcode}/>
+        <Route path="/encoding" component={EncodingTools}/>
+        <Route path="/text-to-qrcode" component={TextToQrcode}/>
+        <Route path="/magnet-to-hash" component={MagnetToHash}/>
+        <Route path="/hash-to-magnet" component={HashToMagnet}/>
+      </Switch>
     )
   }
 }

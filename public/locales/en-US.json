@@ -1,0 +1,12 @@
+{
+  "APP_TITLE": "Yang's Tool Kit",
+  "QRCODE_TIP": "Please input the text which will be put into the Qr-Code.",
+  "QRCODE_TEXT": "Text:",
+  "ENCODING_URLENCODE": "URL encode",
+  "ENCODING_URLENCODE_PLACEHOLDER_TEXT": "To be encoded",
+  "ENCODING_URLENCODE_PLACEHOLDER_ENCODED": "URL encoded text",
+  "ENCODING_BASE64": "Base64",
+  "ENCODING_BASE64_PLACEHOLDER_TEXT": "To be encoded",
+  "ENCODING_BASE64_PLACEHOLDER_ENCODED": "Base64 encoded text",
+  "BOTTOM_INFO": "See <a href='https://github.com/yang69'>https://github.com/yang69</a> for more."
+}
